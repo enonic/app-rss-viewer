@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <part>
-    <display-name>Webcruiter</display-name>
+    <display-name>RSS viewer</display-name>
     <config>
         <field-set name="basic">
             <label>Basic settings</label>

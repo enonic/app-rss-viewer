@@ -4,7 +4,7 @@ plugins {
 
 app {
     name = project.appName
-    displayName = 'Webcruiter'
+    displayName = 'RSS viewer'
     vendorName = 'Enonic AS'
     vendorUrl = 'https://enonic.com'
     systemVersion = "${xpVersion}"
@@ -25,6 +25,7 @@ dependencies {
     //include "com.enonic.xp:lib-repo:${xpVersion}"
     //include "com.enonic.xp:lib-websocket:${xpVersion}"
     include "com.enonic.lib:lib-http-client:1.0.1"
+    include "com.enonic.lib:lib-cache:1.1.0"
     include 'org.json:json:20160212'
 }
 

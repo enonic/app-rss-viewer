@@ -1,0 +1,7 @@
+<section class="widget">
+    <h3 data-th-if="${heading}" data-th-text="${heading}">Heading</h3>
+    <p data-th-each="item : ${items}">
+        <a data-th-href="${item.link}" data-th-text="${item.title}" target="_blank" rel="noopener noreferrer">Item</a>
+    </p>
+    <div data-th-remove="tag" data-th-utext="${text}">Optional HTML text</div>
+</section>
