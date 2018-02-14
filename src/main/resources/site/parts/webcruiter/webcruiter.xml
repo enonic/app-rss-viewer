@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part>
+    <display-name>Webcruiter</display-name>
+    <config>
+        <field-set name="basic">
+            <label>Basic settings</label>
+            <items>
+                <input name="heading" type="TextLine">
+                    <label>Heading</label>
+                    <occurrences maximum="1" minimum="0"/>
+                </input>
+                <input name="sourceRssUrl" type="TextLine">
+                    <label>Source RSS Url</label>
+                    <occurrences maximum="1" minimum="0"/>
+                </input>
+                <input name="numResults" type="Long">
+                    <label>Max amount of results to show</label>
+                    <occurrences maximum="1" minimum="0"/>
+                    <config>
+                        <min>1</min>
+                        <max>20</max>
+                    </config>
+                    <default>5</default>
+                </input>
+                <input name="text" type="HtmlArea">
+                    <label>Text</label>
+                    <occurrences maximum="1" minimum="0"/>
+                </input>
+            </items>
+        </field-set>
+        <field-set name="advanced">
+            <label>Advanced settings</label>
+            <items>
+                <input name="connectionTimeout" type="Long">
+                    <label>Connection timeout (milliseconds)</label>
+                    <occurrences maximum="1" minimum="0"/>
+                    <config>
+                        <min>1</min>
+                        <max>30000</max>
+                    </config>
+                    <default>5000</default>
+                </input>
+                <input name="readTimeout" type="Long">
+                    <label>Read timeout (milliseconds)</label>
+                    <occurrences maximum="1" minimum="0"/>
+                    <config>
+                        <min>1</min>
+                        <max>30000</max>
+                    </config>
+                    <default>5000</default>
+                </input>
+            </items>
+        </field-set>
+    </config>
+</part>

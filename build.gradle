@@ -4,9 +4,9 @@ plugins {
 
 app {
     name = project.appName
-    displayName = 'Vanilla Starter Kit'
+    displayName = 'Webcruiter'
     vendorName = 'Enonic AS'
-    vendorUrl = 'http://enonic.com'
+    vendorUrl = 'https://enonic.com'
     systemVersion = "${xpVersion}"
 }
 
@@ -20,10 +20,12 @@ dependencies {
     //include "com.enonic.xp:lib-i18n:${xpVersion}"
     //include "com.enonic.xp:lib-auth:${xpVersion}"
     //include "com.enonic.xp:lib-context:${xpVersion}"
-    //include "com.enonic.xp:lib-io:${xpVersion}"
+    include "com.enonic.xp:lib-io:${xpVersion}"
     //include "com.enonic.xp:lib-mail:${xpVersion}"
     //include "com.enonic.xp:lib-repo:${xpVersion}"
     //include "com.enonic.xp:lib-websocket:${xpVersion}"
+    include "com.enonic.lib:lib-http-client:1.0.1"
+    include 'org.json:json:20160212'
 }
 
 repositories {
