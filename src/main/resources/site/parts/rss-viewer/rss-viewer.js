@@ -5,6 +5,7 @@ var thymeleaf = require('/lib/xp/thymeleaf');
 var cacheLib = require('/lib/xp/cache');
 var httpClient = require('/lib/http-client');
 var xmlParser = require('/lib/xmlParser');
+var util = require('/lib/enonic/util');
 
 var view = resolve('rss-viewer.html');
 var cache = cacheLib.newCache({
@@ -43,6 +44,7 @@ function handleGet(request) {
                 if (rssRequest && rssRequest.body) {
                     var rssAsJson = xmlParser.parse(rssRequest.body);
                     if (rssAsJson.rss && rssAsJson.rss.channel && rssAsJson.rss.channel.item) {
+                        rssAsJson.rss.channel.item = util.data.forceArray(rssAsJson.rss.channel.item);
                         rssAsJson.rss.channel.item.forEach(function (item, index) {
                             var numResults = config.numResults || 5;
                             if (index < numResults) {
