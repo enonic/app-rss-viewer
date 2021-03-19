@@ -1,11 +1,11 @@
 // Runs each time the server is started or the app is installed
 
 var portal = require('/lib/xp/portal');
-var thymeleaf = require('/lib/xp/thymeleaf');
-var cacheLib = require('/lib/xp/cache');
+var thymeleaf = require('/lib/thymeleaf');
+var cacheLib = require('/lib/cache');
 var httpClient = require('/lib/http-client');
 var xmlParser = require('/lib/xmlParser');
-var util = require('/lib/enonic/util');
+var util = require('/lib/util');
 
 var view = resolve('rss-viewer.html');
 var cache = cacheLib.newCache({
